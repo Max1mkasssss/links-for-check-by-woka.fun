@@ -1,59 +1,154 @@
-.button-container{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
- }
 .Btn {
-  width: 100px;
-  height: 35px;
+  width: 120px;
+  height: 45px;
+  background-color: rgb(65, 64, 64);
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.342);
+  border-radius: 5px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  border: none;
-  border-radius: 4px;
+  justify-content: center;
+  gap: 7px;
+  position: relative;
   overflow: hidden;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
-  cursor: pointer;
-  
+  transition-duration: 0.5s;
 }
 
 .text {
-  width: 65%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: rgb(2, 153, 153);
+  color: rgb(181, 160, 255);
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  z-index: 2;
 }
 
 .svgIcon {
-  width: 35%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: teal;
+  z-index: 2;
+}
+
+.svgIcon path {
+  fill: rgb(181, 160, 255);
+}
+
+.Btn:hover {
+  color: rgb(181, 160, 255);
+}
+
+.effect {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(181, 160, 255);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+.Btn:hover .effect {
+  transform: scale(15);
+  transform-origin: center;
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.Btn:hover {
+  box-shadow: 0px 0px 5px rgb(181, 160, 255), 0px 0px 10px rgb(181, 160, 255),
+    0px 0px 30px rgb(181, 160, 255);
+  transition-duration: 0.7s;
 }
 
 .Btn:hover .text {
-  background-color: rgb(0, 133, 133);
+  color: rgb(65, 64, 64);
 }
 
-.Btn:hover .svgIcon {
-  background-color: rgb(0, 105, 105);
+.Btn:hover .svgIcon path {
+  fill: rgb(65, 64, 64);
 }
-@media(max-width: 520px){ 
-  .button-container{ 
+.button-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 520px) {
+  .button-wrapper {
     margin-top: 20px;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
   }
-  .Btn{ 
+  .Btn {
     justify-content: center;
     align-items: center;
   }
- }
+}
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+
+
+// .button-wrapper{ 
+//   position: relative;
+//   .back{
+//     position: absolute;
+//     bottom: 10px;
+//     right: 10px;
+//   }
+// }
