@@ -87,7 +87,6 @@ a {
 }
 .container {
   margin: 0 auto;
-  outline: 2px solid red;
   width: 1000px;
   padding: 10px;
 }
@@ -95,7 +94,6 @@ a {
 @media (max-width: 520px) {
   .container {
     margin: 0 auto;
-    outline: 2px solid red;
     width: 280px;
   }
 }
