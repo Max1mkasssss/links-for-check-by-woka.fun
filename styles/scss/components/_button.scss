@@ -44,3 +44,16 @@
 .Btn:hover .svgIcon {
   background-color: rgb(0, 105, 105);
 }
+@media(max-width: 520px){ 
+  .button-container{ 
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .Btn{ 
+    justify-content: center;
+    align-items: center;
+  }
+ }
