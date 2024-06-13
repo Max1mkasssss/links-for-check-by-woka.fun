@@ -1,3 +1,3 @@
-function redirectToPage() {
-    window.location.href = '/index.html';
-}
+// function redirectToPage() {
+//     window.location.href = '/index.html';
+// }
