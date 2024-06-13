@@ -26,5 +26,5 @@
 - [@Max1mkasssss](https://github.com/Max1mkasssss)
 
 ## 🛠 Developer Skills:
-Javascript, HTML, CSS, SASS, SCSS, Adaptive / Responsive
+JS, HTML, CSS, SASS, SCSS, Adaptive / Responsive
 
